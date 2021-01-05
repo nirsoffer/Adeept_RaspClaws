@@ -207,11 +207,15 @@ def get_direction():
 
 if __name__ == '__main__':
 
-	print(sys.argv)
-	while True:
-		for i in range(0,100):
-			pwm.set_pwm(0, 0, (300+i))
-			time.sleep(0.05)
-		for i in range(0,100):
-			pwm.set_pwm(0, 0, (400-i))
-			time.sleep(0.05)
+	print(sys.argv , sys.argc)
+	if(sys.argv[1] == "reset"):
+		for i in range(0,13):
+			pwm.set_pwm(i,0, 0);
+	else:
+		while True:
+			for i in range(0,100):
+				pwm.set_pwm(0, 0, (300+i))
+				time.sleep(0.05)
+			for i in range(0,100):
+				pwm.set_pwm(0, 0, (400-i))
+				time.sleep(0.05)
