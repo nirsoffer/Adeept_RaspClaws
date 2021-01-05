@@ -209,7 +209,9 @@ if __name__ == '__main__':
 
 	print(sys.argv)
 	if(sys.argv[1] == "reset"):
+		print("resetting :")
 		for i in range(0,13):
+			print(i)
 			pwm.set_pwm(i,0, 0);
 	else:
 		while True:
