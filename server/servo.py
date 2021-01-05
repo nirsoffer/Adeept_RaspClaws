@@ -207,7 +207,7 @@ def get_direction():
 
 if __name__ == '__main__':
 
-	print(sys.argv , sys.argc)
+	print(sys.argv)
 	if(sys.argv[1] == "reset"):
 		for i in range(0,13):
 			pwm.set_pwm(i,0, 0);
