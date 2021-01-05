@@ -75,7 +75,7 @@ def camera_ang(direction, ang):
 			org_pos+=ang
 			org_pos = ctrl_range(org_pos, look_max, look_min)
 		elif direction == 'home':
-			org_pos = 300	
+			org_pos = 300
 
 	pwm.set_all_pwm(13,org_pos)
 
@@ -206,6 +206,8 @@ def get_direction():
 
 
 if __name__ == '__main__':
+
+	print(sys.argv)
 	while True:
 		for i in range(0,100):
 			pwm.set_pwm(0, 0, (300+i))
